@@ -84,6 +84,12 @@ main {
   background-color: #fff;
 }
 
+.user-container {
+  background-image: url('../../assets/images/photo.jpg');
+  background-size: cover;
+  min-height: 100vh;
+}
+
 header, footer{
   background-color: #40e0d0;
 }
