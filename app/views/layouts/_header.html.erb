@@ -1,7 +1,7 @@
-<header class="py-3">
+<header class="py-1">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="/">Photo</a>
+      <a class="navbar-brand" href="/">Photo Studio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
             <span></span>
@@ -13,7 +13,7 @@
           <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
               <li class="nav-item">
-                <%= link_to(root_path, class: "nav-link btn btn-light mx-3") do %><i class="fas fa-mountain"></i> マイページ<% end %>
+                <%= link_to(user_path(current_user.id), class: "nav-link btn btn-light mx-3") do %><i class="fas fa-mountain"></i> マイページ<% end %>
               </li>
               <li class="nav-item">
                 <%= link_to(destroy_user_session_path,method: :delete, class: "nav-link btn btn-light mx-3") do %><i class="fas fa-sign-out-alt"></i> ログアウト<% end %>
@@ -30,10 +30,10 @@
                 <%= link_to(about_path, class: "nav-link btn btn-rise btn-light mx-2") do %><i class="fas fa-seedling"></i> About<% end %>
               </li>
               <li class="nav-item">
-                <%= link_to(new_user_registration_path, class: "nav-link btn btn-light mx-2") do %><i class="fas fa-user-plus"></i> 新規登録<% end %>
+                <%= link_to(new_user_registration_path, class: "nav-link btn btn-light mx-2") do %><i class="fas fa-user-plus"></i> Sign up<% end %>
               </li>
               <li class="nav-item">
-                <%= link_to(new_user_session_path, class: "nav-link btn btn-light mx-2") do %><i class="fas fa-sign-in-alt"></i> ログイン<% end %>
+                <%= link_to(new_user_session_path, class: "nav-link btn btn-light mx-2") do %><i class="fas fa-sign-in-alt"></i> Log in<% end %>
               </li>
             <%end%>
           </ul>

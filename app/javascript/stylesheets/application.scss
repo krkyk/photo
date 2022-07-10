@@ -5,7 +5,7 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-  font-family: 'M PLUS 1p', sans-serif;
+  font-family: 'Permanent Marker', cursive;
 }
 
 main {
@@ -92,4 +92,12 @@ main {
 
 header, footer{
   background-color: #40e0d0;
+}
+
+.navbar-brand, .top-text{
+    color: #fff;
+}
+
+.navbar-brand{
+    font-size: 2rem;
 }

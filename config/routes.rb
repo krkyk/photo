@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :public do
+    get 'users/show'
+    get 'users/edit'
+    get 'users/update'
+  end
   devise_for :users,skip: [:passwords], controllers: {
     registrations: "public/registrations",
     sessions: 'public/sessions'
@@ -10,6 +15,7 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: 'homes#top'
     get 'about' => 'homes#about'
+    resources :users, only: %i[show edit update]
   end
 
   namespace :admin do
