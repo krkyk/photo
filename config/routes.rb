@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   namespace :public do
+    get 'posts/new'
+    get 'posts/index'
+    get 'posts/show'
+    get 'posts/edit'
+  end
+  namespace :public do
     get 'users/show'
     get 'users/edit'
     get 'users/update'
