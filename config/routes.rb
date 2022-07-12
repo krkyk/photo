@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     root to: 'homes#top'
     get 'about' => 'homes#about'
     resources :users, only: %i[show edit update]
-    resources :posts, only: %i[new show edit create destroy update]
+    resources :posts, only: %i[new show index edit create destroy update]
   end
 
   namespace :admin do
