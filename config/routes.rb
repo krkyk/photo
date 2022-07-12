@@ -1,15 +1,4 @@
 Rails.application.routes.draw do
-  namespace :public do
-    get 'posts/new'
-    get 'posts/index'
-    get 'posts/show'
-    get 'posts/edit'
-  end
-  namespace :public do
-    get 'users/show'
-    get 'users/edit'
-    get 'users/update'
-  end
   devise_for :users,skip: [:passwords], controllers: {
     registrations: "public/registrations",
     sessions: 'public/sessions'
@@ -22,6 +11,7 @@ Rails.application.routes.draw do
     root to: 'homes#top'
     get 'about' => 'homes#about'
     resources :users, only: %i[show edit update]
+    resources :posts, only: %i[new show edit create destroy update]
   end
 
   namespace :admin do
