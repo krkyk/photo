@@ -1,2 +1,14 @@
-<h1>Public::Posts#index</h1>
-<p>Find me in app/views/public/posts/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2 class="my-3">
+        Posts
+      </h2>
+    </div>
+  </div>
+  <div class="card-list-container">
+    <div class="row">
+      <%=render"post_index",posts: @posts%>
+    </div>
+  </div>
+</div>

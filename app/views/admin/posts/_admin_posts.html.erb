@@ -1,0 +1,20 @@
+<div class="table-responsive-sm">
+  <table class="table table-hover admin-recipes mb-5 mt-2">
+    <thead>
+      <tr class="admin-table-head">
+        <th>タイトル</th>
+        <th>ニックネーム</th>
+        <th>投稿日</th>
+      </tr>
+    </thead>
+    <% posts.each do |photo| %>
+    <tbody>
+      <tr>
+        <td><%= link_to photo.title, admin_post_path(photo.id) %></td>
+        <td><%#= link_to photo.user.name, admin_user_path(photo.user.id) %></td>
+        <td><%= photo.created_at.strftime('%Y/%m/%d') %></td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>

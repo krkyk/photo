@@ -112,3 +112,13 @@ header, footer{
   width: 350px;
   border-radius: 10%;
 }
+
+.card-img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title{
+  color: #000;
+}
