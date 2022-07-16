@@ -15,11 +15,30 @@
       <h4 class="post-text">
         <%= @post.text %>
       </h4>
-      <% if @post.user == current_user %>
+
+      <h4>場所</h4>
+      <div class="map">
+        <div id="map">
+        </div>
+      </div>
+
+      <div type="text/javascript">
+        <script>
+          function initMap(){
+            let map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: <%= @post.latitude %>, lng: <%= @post.longitude %> },
+            zoom: 15
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
+      </div>
+
+      <%# if @post.user == current_user %>
         <div class="form-group my-5 pt-lg-3 text-right">
           <%= link_to"編集する",edit_post_path(@post.id),class: "btn btn-success" %>
         </div>
-      <% end %>
+      <%# end %>
     </div>
   </div>
 </div>
