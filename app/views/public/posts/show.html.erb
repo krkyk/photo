@@ -34,6 +34,20 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
       </div>
 
+      <% if @post.favorited_by?(current_user) %>
+        <p>
+          <%= link_to post_favorites_path(@post), method: :delete do %>
+            <i class="fas fa-heart" style="color:red;"></i><%= @post.favorites.count %> いいね
+          <% end %>
+        </p>
+        <% else %>
+        <p>
+          <%= link_to post_favorites_path(@post), method: :post do %>
+            <i class="fas fa-heart" style="color:black;"></i><%= @post.favorites.count %> いいね
+          <% end %>
+        </p>
+      <% end %>
+
       <%# if @post.user == current_user %>
         <div class="form-group my-5 pt-lg-3 text-right">
           <%= link_to"編集する",edit_post_path(@post.id),class: "btn btn-success" %>

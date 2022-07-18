@@ -4,8 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :favorites, dependent: :destroy
+
   has_one_attached :user_image
-  
+
   def get_user_image(width,height)
    unless user_image.attached?
      file_path=Rails.root.join("app/assets/images/no_image.jpg")
