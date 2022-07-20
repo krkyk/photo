@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: 'homes#top'
     get 'about' => 'homes#about'
-    resources :users, only: %i[show edit update]
+    resources :users, only: %i[show edit update] do
+      resource :relationships, only:[:create,:destroy]
+      get "followings"=>"relationships#followings",as:"followings"
+      get "followers"=>"relationships#followers",as:"followers"
+    end
     resources :posts, only: %i[new show index edit create destroy update] do
       resource :favorites, only: [:create, :destroy]
     end
