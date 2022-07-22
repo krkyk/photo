@@ -131,3 +131,61 @@ header, footer{
 .about-box{
   color: #fff;
 }
+
+.fa-heart:hover {
+  transform: translateY(-5px);
+}
+
+.btn-edit, .btn-follow, .btn-nofollow {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #80ed99;
+  box-shadow: 0 5px #57cc99;
+}
+.btn-edit:hover {
+  box-shadow: 0 3px #57cc99;
+  top: 1px;
+}
+.btn-edit:active {
+  box-shadow: 0 0 #57cc99;
+  top: 5px;
+}
+
+.btn-follow {
+  background: #3a86ff;
+  box-shadow: 0 5px #4433ff;
+}
+
+.btn-follow:hover {
+  box-shadow: 0 3px #4433ff;
+  top: 1px;
+}
+
+.btn-follow:active {
+  box-shadow: 0 0 #4433ff;
+  top: 5px;
+}
+
+.btn-nofollow {
+  background: #6c757d;
+  box-shadow: 0 5px #495057;
+}
+
+.btn-nofollow:hover {
+  box-shadow: 0 3px #495057;
+  top: 1px;
+}
+.btn-nofollow:active {
+  box-shadow: 0 0 #495057;
+  top: 5px;
+}
