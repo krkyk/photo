@@ -22,6 +22,9 @@
                 <%= link_to(posts_path, class: "nav-link btn btn-light mx-3") do %><i class="fas fa-book-open"></i> 投稿一覧<% end %>
               </li>
               <li class="nav-item">
+                <%= link_to(users_path, class: "nav-link btn btn-light mx-3") do %><i class="fas fa-users"></i> 会員一覧<% end %>
+              </li>
+              <li class="nav-item">
                 <%= link_to(destroy_user_session_path,method: :delete, class: "nav-link btn btn-light mx-3") do %><i class="fas fa-sign-out-alt"></i> ログアウト<% end %>
               </li>
             <%elsif admin_signed_in?%>
