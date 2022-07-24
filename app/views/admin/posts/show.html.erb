@@ -16,7 +16,7 @@
         <%= @post.text %>
       </h4>
       <div class="form-group my-5 pt-lg-3 text-right">
-        <%= link_to"削除する",admin_post_path(@post.id),method: :delete,"data-confirm"=>"本当に削除しますか？",class: "btn  btn-danger my-5" %>
+        <%= link_to"削除する",admin_post_path(@post.id),method: :delete,"data-confirm"=>"本当に削除しますか？",class: "btn  btn-destroy my-5" %>
       </div>
     </div>
   </div>
