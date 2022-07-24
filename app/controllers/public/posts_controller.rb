@@ -37,7 +37,7 @@ class Public::PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path, notice: 'レシピを削除しました。'
+    redirect_to posts_path, notice: '記事を削除しました。'
   end
 
   private

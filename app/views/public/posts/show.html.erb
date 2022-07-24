@@ -51,6 +51,7 @@
       <% if @post.user_id == current_user.id %>
         <div class="form-group my-5 pt-lg-3 text-right">
           <%= link_to"編集する",edit_post_path(@post.id),class: "btn btn-edit" %>
+          <%= link_to"削除する",post_path(@post.id),method: :delete,"data-confirm"=>"本当に削除しますか？",class: "btn btn-destroy" %>
         </div>
       <% end %>
     </div>

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: 'homes#top'
     get 'about' => 'homes#about'
-    resources :users, only: %i[show edit update] do
+    resources :users, only: %i[index show edit update] do
       resource :relationships, only:[:create,:destroy]
       get "followings"=>"relationships#followings",as:"followings"
       get "followers"=>"relationships#followers",as:"followers"
