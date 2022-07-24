@@ -131,3 +131,107 @@ header, footer{
 .about-box{
   color: #fff;
 }
+
+.fa-heart:hover {
+  transform: translateY(-5px);
+}
+
+.btn-edit, .btn-follow, .btn-nofollow, .btn-post {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #80ed99;
+  box-shadow: 0 5px #57cc99;
+}
+.btn-edit:hover {
+  box-shadow: 0 3px #57cc99;
+  top: 1px;
+}
+.btn-edit:active {
+  box-shadow: 0 0 #57cc99;
+  top: 5px;
+}
+
+.btn-follow {
+  background: #3a86ff;
+  box-shadow: 0 5px #4433ff;
+}
+
+.btn-follow:hover {
+  box-shadow: 0 3px #4433ff;
+  top: 1px;
+}
+
+.btn-follow:active {
+  box-shadow: 0 0 #4433ff;
+  top: 5px;
+}
+
+.btn-nofollow {
+  background: #6c757d;
+  box-shadow: 0 5px #495057;
+}
+
+.btn-nofollow:hover {
+  box-shadow: 0 3px #495057;
+  top: 1px;
+}
+
+.btn-nofollow:active {
+  box-shadow: 0 0 #495057;
+  top: 5px;
+}
+
+.btn-post {
+  background: #ff6392;
+  box-shadow: 0 5px #ff0a78;
+}
+
+.btn-post:hover {
+  box-shadow: 0 3px #ff0a78;
+  top: 1px;
+}
+
+.btn-post:active {
+  box-shadow: 0 0 #ff0a78;
+  top: 5px;
+}
+
+.btn-destroy {
+  background: #ef233c;
+  box-shadow: 0 5px #d90429;
+}
+
+.btn-destroy:hover {
+  box-shadow: 0 3px #d90429;
+  top: 1px;
+}
+
+.btn-destroy:active {
+  box-shadow: 0 0 #d90429;
+  top: 5px;
+}
+
+.btn-log {
+  background: #ffe566;
+  box-shadow: 0 5px #ffd819;
+}
+
+.btn-log:hover {
+  box-shadow: 0 3px #ffd819;
+  top: 1px;
+}
+
+.btn-log:active {
+  box-shadow: 0 0 #ffd819;
+  top: 5px;
+}
