@@ -33,9 +33,18 @@
       <!--  </script>-->
       <!--  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>-->
       <!--</div>-->
+
       <p id="favorite-btn-<%= @post.id %>">
         <%= render"public/favorites/favorites",post: @post %>
       </p>
+      <table>
+        <tbody id="comments-list">
+          <%= render"public/comments/comments",comments: @comments%>
+        </tbody>
+      </table>
+      <div id="comments-form">
+        <%= render"public/comments/comment_form",post: @post,comment: @comment%>
+      </div>
       <% if @post.user_id == current_user.id %>
         <div class="form-group my-5 pt-lg-3 text-right">
           <%= link_to"編集する",edit_post_path(@post.id),class: "btn btn-edit" %>
