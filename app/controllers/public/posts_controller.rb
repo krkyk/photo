@@ -1,6 +1,6 @@
 class Public::PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
-  
+
   def new
     @post = Post.new
   end
@@ -21,6 +21,8 @@ class Public::PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments.order(created_at: 'DESC').all
   end
 
   def edit

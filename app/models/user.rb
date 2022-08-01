@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :reverse_of_relationships,class_name: "Relationship",foreign_key:"followed_id",dependent: :destroy
   has_many :followings,through: :relationships,source: :followed
   has_many :followers,through: :reverse_of_relationships,source: :follower
+  has_many :comments, dependent: :destroy
 
   has_one_attached :user_image
 
@@ -19,7 +20,7 @@ class User < ApplicationRecord
    end
      user_image.variant(resize_to_limit:[width,height]).processed
   end
-  
+
   def follow(user_id)
     relationships.create(followed_id: user_id)
   end
