@@ -235,3 +235,7 @@ header, footer{
   box-shadow: 0 0 #ffd819;
   top: 5px;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
