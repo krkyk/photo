@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     end
     resources :chats, only: [:show, :create]
     resource :contacts, only: [:new, :create]
+    post 'contacts/confirm' => 'contacts#confirm', as: :confirm
   end
 
   namespace :admin do
