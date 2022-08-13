@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Kosugi+Maru&family=Rampart+One&display=swap');
 
 body {
   display: flex;
@@ -254,4 +255,9 @@ header, footer{
   width: 50px;
   height: 50px;
   z-index: 10000;
+}
+
+.about-text{
+  font-family: 'Rampart One', cursive;
+  font-family: 'Hachi Maru Pop', cursive;
 }
